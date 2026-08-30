@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "id": "pvp",
+  "version": "1.0.0",
+  "name": "PVP",
+  "description": "A Minecraft Fabric mod that adds WTap mechanics for enhanced PVP gameplay.",
+  "authors": [
+    "Plugin Author"
+  ],
+  "contact": {
+    "homepage": "https://example.com",
+    "sources": "https://github.com/example/pvp"
+  },
+  "license": "MIT",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.author.pvp.PVP"
+    ]
+  },
+  "mixins": [],
+  "depends": {
+    "fabricloader": ">=0.14.0",
+    "minecraft": "1.20",
+    "java": ">=17"
+  }
+}
