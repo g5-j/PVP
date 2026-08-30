@@ -6,7 +6,7 @@ public class WTapConfig {
     private static int maxDelay = 150;
 
     public static void load() {
-        // Load config logic
+        // يمكن إضافة منطق تحميل الإعدادات هنا مستقبلاً
     }
 
     public static boolean isWTapEnabled() {
@@ -21,15 +21,15 @@ public class WTapConfig {
         return minDelay;
     }
 
-    public static void setMinDelay(int minDelay) {
-        WTapConfig.minDelay = minDelay;
+    public static void setMinDelay(int min) {
+        minDelay = min;
     }
 
     public static int getMaxDelay() {
         return maxDelay;
     }
 
-    public static void setMaxDelay(int maxDelay) {
-        WTapConfig.maxDelay = maxDelay;
+    public static void setMaxDelay(int max) {
+        maxDelay = max;
     }
 }
