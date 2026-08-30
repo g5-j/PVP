@@ -1,41 +1,35 @@
 package com.author.pvp.config;
 
 public class WTapConfig {
-    private static final boolean DEFAULT_WTAP_ENABLED = true;
-    private static final int DEFAULT_MIN_DELAY = 50;
-    private static final int DEFAULT_MAX_DELAY = 150;
+    private static boolean wtapEnabled = true;
+    private static int minDelay = 50;
+    private static int maxDelay = 150;
 
-    private boolean wtapEnabled;
-    private int minDelay;
-    private int maxDelay;
-
-    public WTapConfig() {
-        this.wtapEnabled = DEFAULT_WTAP_ENABLED;
-        this.minDelay = DEFAULT_MIN_DELAY;
-        this.maxDelay = DEFAULT_MAX_DELAY;
+    public static void load() {
+        // Load config logic
     }
 
-    public boolean isWTapEnabled() {
+    public static boolean isWTapEnabled() {
         return wtapEnabled;
     }
 
-    public void setWTapEnabled(boolean enabled) {
-        this.wtapEnabled = enabled;
+    public static void setWTapEnabled(boolean enabled) {
+        wtapEnabled = enabled;
     }
 
-    public int getMinDelay() {
+    public static int getMinDelay() {
         return minDelay;
     }
 
-    public void setMinDelay(int minDelay) {
-        this.minDelay = minDelay;
+    public static void setMinDelay(int minDelay) {
+        WTapConfig.minDelay = minDelay;
     }
 
-    public int getMaxDelay() {
+    public static int getMaxDelay() {
         return maxDelay;
     }
 
-    public void setMaxDelay(int maxDelay) {
-        this.maxDelay = maxDelay;
+    public static void setMaxDelay(int maxDelay) {
+        WTapConfig.maxDelay = maxDelay;
     }
 }
