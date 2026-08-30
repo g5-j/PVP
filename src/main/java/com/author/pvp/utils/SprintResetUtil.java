@@ -1,28 +1,20 @@
 package com.author.pvp.utils;
 
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.client.input.Input;
 import net.minecraft.client.network.ClientPlayerEntity;
+import net.minecraft.client.input.Input;
 
-package class SprintResetUtil {
-    
-    public static void resetSprint(PlayerEntity player) {
-        if (!(player instanceof ClientPlayerEntity)) {
+public class SprintResetUtil {
+    public static void resetSprint(ClientPlayerEntity player) {
+        if (player == null || player.input == null) {
             return;
         }
-        
-        ClientPlayerEntity clientPlayer = (ClientPlayerEntity) player;
-        
-        if (clientPlayer.input == null) {
-            return;
-        }
-        
-        Input input = clientPlayer.input;
+
+        Input input = player.input;
         boolean wasPressingForward = input.pressingForward;
-        
+
+        // إعادة تعيين سرعة الـ Sprint والزر W
         input.pressingForward = false;
-        clientPlayer.setSprinting(false);
-        
+        player.setSprinting(false);
         input.pressingForward = wasPressingForward;
     }
 }
